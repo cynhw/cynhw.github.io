@@ -1,7 +1,12 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+$lora-font: "Lora",
+serif;
+
 html {
-  font-family: sans-serif;
+  font-family: $lora-font;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -245,7 +250,7 @@ html {
 
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: sans-serif;
+  font-family: $lora-font;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
