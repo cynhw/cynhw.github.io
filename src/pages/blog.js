@@ -6,22 +6,17 @@ import Head from "../components/head";
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
-  query {
-    allContentfulBlogPost (
-      sort: {
-        fields: publishedDate,
-        order:DESC
-      }
-    ) {
-      edges {
-        node {
-          title
-          slug
-          publishedDate(formatString:"MMMM Do, YYYY")
+    query {
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            title
+            slug
+            publishedDate(formatString: "MMMM Do, YYYY")
+          }
         }
       }
     }
-  }
   `);
   return (
     <Layout>
@@ -31,12 +26,8 @@ const BlogPage = () => {
           return (
             <li key={index} className={blogStyles.post}>
               <Link to={`/blog/${edge.node.slug}`}>
-                <h3 className={blogStyles.postTitle}>
-                  {edge.node.title}
-                </h3>
-                <p className={blogStyles.postDate}>
-                  {edge.node.publishedDate}
-                </p>
+                <h2 className={blogStyles.postTitle}>{edge.node.title}</h2>
+                <p className={blogStyles.postDate}>{edge.node.publishedDate}</p>
               </Link>
             </li>
           );

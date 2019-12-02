@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap');
+
+$footer-font: "Space Mono",
+monospace;
+
 .footer {
+  display: flex;
+  font-family: $footer-font;
   margin-top: 3rem;
+  font-size: 0.8rem;
+  // font-weight: 700;
+  justify-content: space-between;
+
+  p {
+    flex: 1;
+  }
+
+  ul,
+  li {
+    list-style-type: none;
+    display: flex;
+    margin-left: 1rem;
+  }
 }

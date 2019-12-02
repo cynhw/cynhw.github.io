@@ -1,30 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Ovo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=BioRhyme+Expanded:300&display=swap');
+@import url("https://use.typekit.net/psb3xzg.css");
+@import url('https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded&display=swap');
+
+$body-font: "Ovo",
+serif;
+$title-font: "Stint Ultra Expanded",
+serif;
+
+
 .header {
-  padding: 1rem 0 3rem;
+  // padding: 1rem 2rem;
+  margin-left: 6rem;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+
+  a:link,
+  a:visited {
+    color: #FF5733;
+    text-decoration: none;
+
+  }
+
+  a:hover {
+    color: #F3A82D;
+    border-bottom: 1px dashed #F3A82D;
+  }
+}
+
+.header-text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: stratos-lights, sans-serif;
+  width: 60vw;
 }
 
 .title {
-  color: #000000;
-  font-size: 2rem;
+  font-family: $title-font;
+  font-size: 3.5rem;
+  line-height: 4rem;
   text-decoration: none;
+  font-weight: 100;
+  width: 80vw;
 }
 
 .nav-list {
   display: flex;
   list-style-type: none;
-  margin: 0;
+  margin: 2rem 0 0 0;
 }
 
 .nav-item {
-  color: #999999;
-  font-size: 0.9rem;
+  color: #000000;
+  font-size: 1.5rem;
   margin-right: 1.3rem;
   text-decoration: none;
 }
 
 .nav-item:hover {
-  color: #666666;
+  color: #F3A82D;
 }
 
 .active-nav-item {
-  color: #333333;
+  color: #FF5733;
 }

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+
+// nice color: #272D65
+
+$blog-font: "Space Mono",
+monospace;
+
+.posts {
+  list-style-type: none;
+  margin: 0;
+}
+
+
+.post {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  box-shadow: 6px 6px 0 0 #181C3F;
+  background-color: #FFFFFF;
+  width: 70%;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #000000;
+    line-height: 1.8rem;
+  }
+
+}
+
+.date {
+  font-family: $blog-font;
+  font-size: 0.8rem;
+}
+
+hr {
+  border: 0;
+  border-bottom: 2px dotted rgb(102, 95, 95);
+  background-color: #EEE;
+}

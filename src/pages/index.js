@@ -1,23 +1,40 @@
 import React from "react";
-import { Link } from "gatsby";
-
 import Layout from "../components/layout";
+import blogStyles from "./blog.module.scss";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import Head from "../components/head";
 
-const IndexPage = () => {
+const BlogPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            title
+            slug
+            publishedDate(formatString: "MMMM Do, YYYY")
+          }
+        }
+      }
+    }
+  `);
   return (
     <Layout>
-      <Head title="Home"/>
-      <h1>Hello.</h1>
-      <p>
-        This is my third time trying to build a gatsby site. Third time's a
-        charm!
-      </p>
-      <p>
-        Need a friend? <Link to="/contact/">Contact Me.</Link>
-      </p>
+      <Head title="Blog" />
+      <div className={blogStyles.posts}>
+        {data.allContentfulBlogPost.edges.map((edge, index) => {
+          return (
+            <li key={index} className={blogStyles.post}>
+              <Link to={`/blog/${edge.node.slug}`}>
+                <h3 className={blogStyles.postTitle}>{edge.node.title}</h3>
+                <p className={blogStyles.postDate}>{edge.node.publishedDate}</p>
+              </Link>
+            </li>
+          );
+        })}
+      </div>
     </Layout>
   );
 };
 
-export default IndexPage;
+export default BlogPage;

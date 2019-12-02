@@ -15,7 +15,14 @@ const Footer = () => {
 
   return (
     <footer className={footerStyles.footer}>
-      <p>Built with &hearts; by {data.site.siteMetadata.author}, © 2019</p>
+      <p>
+        Built with <a href="http://gatsbyjs.org">GatsbyJS</a>, <a href="http://https://www.contentful.com/">Contentful</a> & &hearts; © 2019
+      </p>
+      <ul>
+        <li><a href="http://instagram.com/cynhw">Instagram</a></li> 
+        <li><a href="http://github.com/cynhw">Github</a> </li>
+        <li><a href="https://www.linkedin.com/in/cynhwong/">LinkedIn</a></li>
+        </ul>
     </footer>
   );
 };

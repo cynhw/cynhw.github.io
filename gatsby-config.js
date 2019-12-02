@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: "National Parks",
+    title: "Cynthia Wong",
     author: "Cynthia Wong",
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
     {
-      resolve: 'gatsby-source-contentful',
+      resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-      }
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     },
     "gatsby-plugin-sass",
     {
@@ -26,12 +26,12 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: `gatsby-remark-images-contentful`,
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 790,
+              maxWidth: 590,
             },
           },
         ],

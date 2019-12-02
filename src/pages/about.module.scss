@@ -1,8 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
-
-$lora-font: "Lora",
-"serif";
-
-h2 {
-  font-family: $lora-font;
+.about-container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 1fr 2fr;
+  border: 3px solid #272D65;
+  box-shadow: 6px 6px 0 0 #272D65;
+  border-radius: 20px;
+  padding: 3rem;
+  width: 2fr;
 }
+
+img {
+  border-radius: 20px;
+  border: 3px solid #272D65;
+  box-shadow: 6px 6px 0 0 #272D65;
+}
+
+// .about {
+//   grid-template-columns: 2;
+// }
