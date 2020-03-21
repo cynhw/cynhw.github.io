@@ -14,19 +14,21 @@ const Header = () => {
   `);
   return (
     <header className={headerStyles.header}>
-      <h2 className={headerStyles.title}>
-          Hi, I'm Cynthia. I am a self-taught front-end developer living in the beautiful PNW 🌧️
-      </h2>
+      <h3 className={headerStyles.title}>
+        Hello, I'm Cynthia 🌧️
+      </h3>
       <div className={headerStyles.headerText}>
         <p>
-        I am a Seattle-based customer service specialist dedicated to elevating the 
-        customer experience through empathy and technology. My experiences in policy 
-        research, retail management, customer service, UX design, and web development 
-        have substantiated my communicative skills and my ability to resolve complex issues.
-        I am looking for opportunities in user-experience design. <a href="mailto:cynhowong@gmail.com">Say hello 👋</a>
+          I am a Seattle-based customer service specialist dedicated to
+          elevating the customer experience through empathy and technology. My
+          experiences in policy research, retail management, customer service,
+          UX design, and web development have substantiated my communicative
+          skills and my ability to resolve complex issues. I am looking for
+          opportunities in user-experience design.{" "}
+          <a href="mailto:cynhowong@gmail.com">Say hello 👋</a>
         </p>
       </div>
-      <ul className={headerStyles.navList}>
+      {/* <ul className={headerStyles.navList}>
         <li>
           <Link
             className={headerStyles.navItem}
@@ -54,7 +56,7 @@ const Header = () => {
             Contact
           </Link>
         </li>
-      </ul>
+      </ul> */}
     </header>
   );
 };

@@ -7,12 +7,12 @@ import layoutStyles from "./layout.module.scss";
 const Layout = props => {
   return (
     <div className={layoutStyles.container}>
-      <div className={layoutStyles.content}>
-      <Header />
-      <div className={layoutStyles.main}>
-        {props.children}
-        <Footer />
-      </div>
+      {/* <div className={layoutStyles.content}> */}
+        <Header />
+        <div className={layoutStyles.main}>
+          {props.children}
+          <Footer />
+        {/* </div> */}
       </div>
     </div>
   );

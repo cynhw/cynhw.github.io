@@ -33,12 +33,20 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `);
   // 3. create new pages
-  res.data.allContentfulBlogPost.edges.forEach(edge => {
+
+  const posts = res.data.allContentfulBlogPost.edges;
+
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+    const next = index === 0 ? null : posts[index - 1].node;
+
     createPage({
       component: blogTemplate,
-      path: `/blog/${edge.node.slug}`,
+      path: `/blog/${post.node.slug}`,
       context: {
-        slug: edge.node.slug,
+        slug: post.node.slug,
+        previous,
+        next,
       },
     });
   });
